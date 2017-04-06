@@ -14,6 +14,35 @@ function hw_blog_name_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
+
+	// header name
+    $wp_customize->add_section( 'header_name_section', array(
+        'title' => 'Header name',
+        'priority' => 30,
+    ) );
+    $wp_customize->add_setting( 'header_name_head_name', array(
+        'default' => 'Name ...'
+    ) );
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'header_name_control', array(
+        'label' => 'Head name',
+        'section' => 'header_name_section',
+        'settings' => 'header_name_head_name',
+    ) ) );
+
+    // blog title
+    $wp_customize->add_section( 'blog_title_section', array(
+        'title' => 'Blog title',
+        'priority' => 40,
+    ) );
+    $wp_customize->add_setting( 'blog_title_head_name', array(
+        'default' => 'blog ...'
+    ) );
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'blog_title_control', array(
+        'label' => 'Blog title',
+        'section' => 'blog_title_section',
+        'settings' => 'blog_title_head_name',
+    ) ) );
+
 }
 add_action( 'customize_register', 'hw_blog_name_customize_register' );
 

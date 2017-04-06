@@ -1,0 +1,22 @@
+{
+  "name": "blogname",
+  "homepage": "https://github.com/MaxGoryachev/blog-name",
+  "authors": [
+    "Maxim Goryachev <maxto4kacom@gmail.com>"
+  ],
+  "description": "my blog name",
+  "main": "",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "v4.0.0-alpha.6",
+    "font-awesome": "^4.7.0"
+  }
+}
