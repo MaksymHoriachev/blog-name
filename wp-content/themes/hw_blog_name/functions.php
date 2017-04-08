@@ -170,3 +170,48 @@ function blog_home_excerpt_more(){
     return ' ...';
 };
 add_filter( 'excerpt_more', 'blog_home_excerpt_more' );
+
+/**
+ * -------------------------------- the custom post type -------------------------------
+ */
+
+function blog_home_custom_post_type() {
+
+    $labels = array(
+        'name' => 'maxim',
+        'singular_name' => 'maxim',
+        'add_new' => 'Add new',
+        'all_items' => 'All Items',
+        'add_new_item' => 'Add Item',
+        'edit_item' => 'Edit Item',
+        'new_item' => 'New Item',
+        'view_item' => 'View Item',
+        'search_item' => 'Search Portfolio',
+        'not_found' => 'No items found',
+        'not_found_in_trash' => 'No items found in trash',
+        'parent_item_colon' => 'Parent Item'
+    );
+    $args = array(
+        'labels' => $labels,
+        'public' => true,
+        'has_archive' => true,
+        'publicly_queryable' => true,
+        'query_var' => true,
+        'rewrite' => true,
+        'capability_type' => 'post',
+        'hierarchical' => false,
+        'supports' => array(
+            'title',
+            'editor',
+            'excerpt',
+            'thumbnail',
+            'revisions',
+        ),
+        'taxonomies' => array('maxim', 'post_tag'),
+        'menu_position' => 5,
+        'exclude_from_search' => false
+    );
+    register_post_type('maxim',$args);
+};
+
+add_action( 'init', 'blog_home_custom_post_type' );

@@ -20,7 +20,7 @@
                     <?php if ( has_post_thumbnail() ) {
                         the_post_thumbnail( 'small-thumbnail' );
                     } else { ?>
-                        <img src="<?php echo get_template_directory_uri(); ?>/img/600x400.png">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/Looking-for-work.jpg">
                     <?php } ?>
 
                 </div>
@@ -30,13 +30,6 @@
                 <div class="entry-excerpt"><?php the_excerpt(); ?></div>
 
             </div>
-
-
-
-
-
-
-
         </a>
 
     </article><!-- #post-## -->

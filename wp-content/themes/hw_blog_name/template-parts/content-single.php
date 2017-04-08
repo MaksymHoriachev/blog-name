@@ -9,10 +9,16 @@
 
 ?>
 
-<div class="col-md-12 col-lg-6">
+<div class="col-12">
     <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-        <a href="<?php echo get_permalink() ;?>" class="posts-thumbnail"><?php the_post_thumbnail(); ?></a>
+        <div class="single-thumbnail">
+            <?php if (  has_post_thumbnail() ) {
+                the_post_thumbnail( 'small-thumbnail' );
+            } else { ?>
+                <img src="<?php echo get_template_directory_uri(); ?>/img/Looking-for-work.jpg">
+            <?php } ?>
+        </div>
 
         <header class="entry-header">
             <?php

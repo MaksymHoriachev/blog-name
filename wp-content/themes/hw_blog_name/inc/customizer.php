@@ -43,6 +43,21 @@ function hw_blog_name_customize_register( $wp_customize ) {
         'settings' => 'blog_title_head_name',
     ) ) );
 
+    // Front img
+    $wp_customize->add_section( 'logo_section', array(
+        'title' => 'logo',
+        'priority' => 50,
+    ) );
+    $wp_customize->add_setting( 'logo_img', array() );
+
+    $wp_customize->add_control( new WP_Customize_Cropped_Image_Control( $wp_customize, 'logo_img_control', array(
+        'label' => 'Image',
+        'section' => 'logo_section',
+        'settings' => 'logo_img',
+        'width' => 750,
+        'height' => 500,
+    ) ) );
+
 }
 add_action( 'customize_register', 'hw_blog_name_customize_register' );
 

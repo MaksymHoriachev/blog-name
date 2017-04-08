@@ -127,6 +127,9 @@ a {
   background: -webkit-linear-gradient(top, #eeeeee 0%, rgba(37, 141, 200, 0) 100%);
   background: linear-gradient(to bottom, #eeeeee 0%, rgba(37, 141, 200, 0) 100%); }
 
+.site-content {
+  padding-bottom: 80px; }
+
 .site-main {
   background-color: #fff; }
   .site-main .row .col-md-12 {
@@ -194,3 +197,32 @@ a {
     padding: 0 10px 15px 10px; }
     .entry-link-content .entry-excerpt p {
       margin: 0; }
+
+.blog-pagination nav.navigation.pagination {
+  justify-content: flex-end; }
+
+.nav-links a,
+.nav-links span {
+  font: 13px Arial;
+  padding: 5px 9px;
+  background-color: #eee;
+  color: #000; }
+
+.nav-links span.current {
+  background-color: #555;
+  color: #fff; }
+
+.site-footer {
+  padding: 20px 0;
+  background: linear-gradient(0deg, #333 1px, rgba(0, 0, 0, 0.3) 1px), linear-gradient(90deg, #333 1px, transparent 1px), linear-gradient(0deg, #000, #555);
+  background-size: 5px 5px, 5px, auto; }
+
+.footer-copy {
+  color: #fff;
+  font-size: 13px;
+  text-transform: uppercase;
+  font-family: Arial; }
+
+/* -------------------------- single --------------------------- */
+.single-thumbnail {
+  padding-top: 15px; }

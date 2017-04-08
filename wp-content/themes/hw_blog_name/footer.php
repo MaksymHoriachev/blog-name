@@ -16,11 +16,14 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'hw_blog_name' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'hw_blog_name' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'hw_blog_name' ), 'hw_blog_name', '<a href="https://automattic.com/" rel="designer">Underscores.me</a>' ); ?>
-		</div><!-- .site-info -->
+        <div class="container">
+            <div class="row">
+                <div class="col-12 footer-copy">
+                    <span>© Copyright 2012</span>
+                </div>
+            </div>
+        </div>
+
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 

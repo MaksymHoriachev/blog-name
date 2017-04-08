@@ -32,11 +32,17 @@ get_header(); ?>
 
                                 <?php get_template_part( 'template-parts/content', get_post_format() ); ?>
 
-                            <?php endwhile;
+                            <?php endwhile; ?>
 
-                            the_posts_navigation();
+                            <div class="blog-pagination col-12">
+                                <?php the_posts_pagination( array(
+                                    'prev_text'     => __( 'Previous page' ),
+                                    'next_text'     => __( 'Next page' ),
+                                    'prev_next'     => false
+                                ) ); ?>
+                            </div>
 
-                        else :
+                        <?php else :
 
                             get_template_part( 'template-parts/content', 'none' );
 
